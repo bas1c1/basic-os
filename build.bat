@@ -1,7 +1,7 @@
 @echo off
 @nasm -f elf32 boot.asm -o kasm.o
 @move kasm.o "build"
-@gcc -m32 -c kernel.c -o kc.o -ffreestanding -nostdlib -nostdinc
+@gcc -m32 -c kernel.c -o kc.o
 @move kc.o "build"
 @copy link.ld "build"
 @cd "build"
